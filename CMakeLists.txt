@@ -86,7 +86,7 @@ endif()
 # export(EXPORT libnfs         NAMESPACE libnfs::        FILE "${CMAKE_CURRENT_BINARY_DIR}/libnfs-config.cmake")
 
 # this will create relocatable config file in installation directory
-install(libnfs
+install(EXPORT libnfs
         DESTINATION "${INSTALL_CMAKE_DIR}"
         NAMESPACE libnfs::
         FILE libnfs-config.cmake)
