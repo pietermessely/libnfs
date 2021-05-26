@@ -83,9 +83,7 @@ if(ENABLE_UTILS)
 endif()
 
 # this will create build-tree-specific config file (so downstream client can use this specific build without having to install package)
-export(EXPORT libnfs
-       NAMESPACE libnfs::
-       FILE "${CMAKE_CURRENT_BINARY_DIR}/libnfs-config.cmake")
+# export(EXPORT libnfs         NAMESPACE libnfs::        FILE "${CMAKE_CURRENT_BINARY_DIR}/libnfs-config.cmake")
 
 # this will create relocatable config file in installation directory
 install(EXPORT libnfs
