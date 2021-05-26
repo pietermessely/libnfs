@@ -12,4 +12,8 @@ function(core_add_library name)
   add_library(${name} OBJECT ${SOURCES} ${HEADERS})
   target_include_directories(${name} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
   set(CORE_LIBRARIES "${name};${CORE_LIBRARIES}" CACHE INTERNAL "")
+  install(TARGETS ${name} EXPORT libnfs
+                    RUNTIME DESTINATION bin
+                    ARCHIVE DESTINATION lib
+                    LIBRARY DESTINATION lib)
 endfunction()
